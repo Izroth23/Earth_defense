@@ -1,0 +1,327 @@
+@font-face {
+    font-family: pixel;
+    src: url("image/Tiny5-Regular.ttf");
+}
+/* rgb(17, 255, 0) */
+#canvas1{
+    position: absolute;
+    background-attachment: fixed;
+    bottom: 0;
+    background-image: url("image/bg5.jpg");
+    background-size: contain;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    /* border-style: solid;
+    border-width: 4px;
+    border-image: linear-gradient(45deg, cyan, blue) 1; */
+    border-top: 0px;
+    border-bottom: 0px;
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.35);
+
+}
+
+body{
+    background-image: url("image/bgBody.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#playerInfo{
+    position: fixed;
+    top: .5vh;
+    left: 20.5vw;
+    color: white;
+}
+
+#player{
+    visibility: hidden;
+}
+
+#Hd{
+    position: absolute;
+    color:rgb(40, 206, 221);
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    display: inline;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#Hd2{
+    position: absolute;
+    margin: 0;
+    color:rgb(40, 206, 221);
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    display: inline;
+    box-sizing: border-box;
+}
+
+#lowerTitle{
+    display: inline;
+    box-sizing: border-box;
+    position: absolute;
+    color: rgb(40, 206, 221);
+}
+
+#textInput{
+    position: absolute;
+    z-index: 1;
+    width: 30vw;
+    height: 10vh;
+    top: 10%;
+    left: 35%;
+    visibility: hidden;
+    background: none;
+    color: rgb(40, 206, 221);
+    text-align: center;
+    background-color: none;
+    border-style: solid;
+    border-color: rgb(40, 206, 221);
+    border-radius: 10px;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    font-size: 2em;
+}
+
+#enterButton{
+    width: 6%;
+    height: 5%;
+    top: 27%;
+    left: 54%;
+    text-align: center;
+    color: rgb(40, 206, 221);
+    background: none;
+    text-transform: capitalize;
+    border-style: solid;
+    border-width: 2px;
+    border-color:rgb(40, 206, 221);
+    border-radius: 10px;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+}
+
+#enterButton:hover{
+    background-color: rgb(40, 206, 221);
+    color: black;
+}
+
+#playAgainButton{
+    width: 10%;
+    height: 5%;
+    top: 59%;
+    left: 45%;
+    border-style: solid;
+    border-color: rgb(40, 206, 221);
+    border-radius: 10px;
+    color: rgb(40, 206, 221);
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+}
+
+#startGameButton{
+    width: 10%;
+    height: 5%;
+    top: 45%;
+    left: 45%;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    border-style: none;
+    font-size: 30px;
+}
+
+#startGameButton:hover{
+    color: rgb(40, 206, 221);
+}
+
+button{
+    background-attachment: fixed;
+    position: absolute;
+    z-index: 1;
+    visibility: hidden;
+    color: white;
+    font-size: 20px;
+    background: none;
+}
+
+input::placeholder{
+    color: rgb(40, 206, 221);
+}
+
+#playAgainButton:hover{
+    color:black;
+    background-color: rgb(40, 206, 221);
+}
+
+#pauseButton, #resumeButton{
+    position: absolute;
+    top: 1%;
+    left: 77.5%;
+    background-color: none;
+    border: none;
+}
+
+#leaderboards{
+    position: absolute;
+    background-attachment: fixed;
+    top: 0;
+    left: 80vw;
+    margin: none;
+    background: none;
+    border: none;
+    color: rgb(40, 206, 221);
+    text-align: center;
+    width: 20vw;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#toptitle{
+    position: relative;
+    background-color: none;
+    color: rgb(40, 206, 221);
+    margin-top: 5vh;
+    font-size: 2em;
+    position: center;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+#first{
+    position: absolute;
+    background: none;
+    left: 80%;
+    top: 16%;
+    color: #ffffff;
+    width: 3%;
+    height: 7%;
+    line-height: 300%;
+}
+
+#rank{
+    position: absolute;
+    background: none;
+    left: 80%;
+    top: 39%;
+    font-size: 140%;
+    display: block;
+    line-height: 300%;
+    color: white;
+    width: 3%;
+    height: 7%;
+}
+
+#tenthrank{
+    position: absolute;
+    background: none;
+    left: 81%;
+    top: 90%;
+    font-size: 140%;
+    display: block;
+    color: white;
+    width: 3%;
+    height: 7%;
+}
+
+#leaderboards>pre{
+    position: relative;
+    margin-top: 5vh;
+    margin-left: 3%;
+    background-attachment: fixed;
+    color: white;
+    font-size: medium;
+    display: block;
+    font-size: 1em;
+    /* background-image: url("image/galaxy.jpg"); */
+    background:none;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    text-align: justify;
+    /* border-style: solid; */
+    border-image: linear-gradient(45deg, aquamarine, cyan, aqua,  blue) 1;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    overflow-y: scroll;   
+}
+
+::-webkit-scrollbar{
+    width: 5%;
+
+}
+
+::-webkit-scrollbar-track{
+    border-radius: 15%;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(40, 206, 221);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(45deg, aquamarine, cyan, aqua,  blue) 1;
+}
+
+pre{
+    margin: 0;
+    background-color: black;
+    bottom: 0;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+
+/* SIDEBAR */
+*{
+    margin: 0;
+    padding: 0;
+  
+    list-style: none;
+    text-decoration: none;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+}
+
+.sidebar{
+    position: absolute;
+    top: 30vh;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 250px;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 70px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.sidebar ul a:hover{
+    color: rgb(40, 206, 221);
+}
+
+/* SIDEBAR */
+img{
+    visibility: hidden;
+    position: fixed;
+}
+
+#boss{
+    position: fixed;
+}
+
+#htp{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+}
+
+#htpF{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    background: none;
+}

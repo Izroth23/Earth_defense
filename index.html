@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Defense</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id = "Hd">EARTH</div>
+    <div id = "Hd2">DEFENSE</div>
+    <div id = "lowerTitle">»»—A galactic Typing Adventure—««</div>
+    <canvas id="canvas1"></canvas>
+    <input type='text', id='textInput', placeholder='Click here to enter your name'><br>
+    <button id="enterButton">Enter</button>
+    <button id="playAgainButton">Play Again</button>
+    <button id="startGameButton">Start Game</button>
+    <button id ="pauseButton"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg></button>
+    <button id = "resumeButton"><svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#e8eaed"><path d="M320-200v-560l440 280-440 280Zm80-280Zm0 134 210-134-210-134v268Z"/></svg></button>
+
+    <div id="playerInfo">
+        <p id="score">Score:</p>
+        <p id="accuracy">Accuracy:</p>
+        <p id="wave">Wave:</p>
+    </div>
+    <img id="player" src="image/player.png">
+    <img id="explosion" src="image/explosion.png">
+    <img id="ship1" src="image/ship1.png">
+    <img id="ship2" src="image/ship2.png">
+    <img id="ship3" src="image/ship3.png">
+    <img id="asteroid" src="image/asteroid.png">
+    <img id="monster" src="image/monster.png">
+    <img id="boss" src="image/boss.png">
+    <img id="projectile" src="image/power-up.png">
+    <img id="projectile-explosion" src="image/explosions.png">
+
+    <div id="leaderboards">
+        <br>
+        <h2 id = "toptitle">LEADERBOARDS</h2>
+        <h5 id = "topcon"><pre></pre></h5>
+        <pre id="list"></pre>
+    </div>
+    <button id="btn"></button>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="tutorial.html">HOW TO PLAY</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+        </ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- = "image/space-background.jpg" style = "background-repeat: no-repeat; background-size: cover; background-attachment: fixed;" -->
