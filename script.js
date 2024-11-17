@@ -865,7 +865,7 @@ class Leaderboards{
         this.list = document.getElementById('list');
         this.clearButton = document.getElementById('clearButton');
         this.enterButton = document.getElementById('enterButton');
-        this.title = document.getElementById('toptitle');
+        this.title = document.getElementById('leaderboardHeader');
         this.header = document.getElementById('topcon');
         this.library = [];
         this.text;
@@ -1261,10 +1261,13 @@ class colorAlternate{
         this.hd1 = document.getElementById('Hd');
         this.hd2 = document.getElementById('Hd2');
         this.lowerTitle = document.getElementById('lowerTitle');
-        this.topTitle = document.getElementById('toptitle');
+        this.leaderboardHeader = document.getElementById('leaderboardHeader');
         this.counter = 0;
         this.duration = 60;
-
+        this.b = 0;
+        this.r = String(Math.random() * 255);
+        this.g = String(Math.random() * 255);
+ 
         //font size
         this.hd1.style.fontSize = String(width * 0.04)+'px';
         this.hd2.style.fontSize = String(width * 0.04)+'px';
@@ -1279,28 +1282,25 @@ class colorAlternate{
     }
 
     alternate(context){
-        if(this.counter == this.duration){
-            let r = String(Math.round(Math.random() * 360));
-            let g = String(Math.round(Math.random() * 360));
-            let b = String(Math.round(Math.random() * 360));
-            this.hd1.style.color = 'rgb('+r+', '+g+', '+b+')';
-            this.hd2.style.color = 'rgb('+r+', '+g+', '+b+')';
-
-            r = String(Math.round(Math.random() * 240));
-            g = String(Math.round(Math.random() * 240));
-            b = String(Math.round(Math.random() * 240));
-            this.lowerTitle.style.color = 'rgb('+r+', '+g+', '+b+')';
-
-            r = String(Math.round(Math.random() * 240));
-            g = String(Math.round(Math.random() * 240));
-            b = String(Math.round(Math.random() * 240));
-            this.topTitle.style.color = 'rgb('+r+', '+g+', '+b+')';
-
-            this.counter = 0;        
-        }
-
-        this.counter++;
+        this.hd1.style.color = 'rgb('+this.r+', '+this.g+', '+this.b+')';
+        this.hd2.style.color = 'rgb('+this.r+', '+this.g+', '+this.b+')';
+        this.lowerTitle.style.color = 'rgb('+this.r+', '+this.g+', '+this.b+')';
+        this.leaderboardHeader.style.color = 'rgb('+this.r+', '+this.g+', '+this.b+')';       
     }
+
+    update(){
+        if(this.b <= 255) {
+            this.b++;
+            this.r = String(Number(this.r) + 0.2);
+            this.g = String(Number(this.g) + 0.3);
+        }
+        else {
+            this.b = 0;
+            this.r = String(Math.random() * 255);
+            this.g = String(Math.random() * 255);
+        }
+    }
+
 }
 
 class Particle{
@@ -1394,6 +1394,7 @@ window.addEventListener('load', function(event){
 
     function animate(){
         alternate.alternate(context);
+        alternate.update();
         particleCounter++;
 
         context.clearRect(0, 0, canvas.width, canvas.height);
