@@ -1,0 +1,69 @@
+/*css/style.css */
+@font-face {
+    font-family: pixel;
+    src: url("image/Tiny5-Regular.ttf");
+}
+body{
+    background-image: url("image/lines.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider{
+    position: absolute;
+    top: 17%;
+    left: 25%;
+	margin:50px auto;
+	width:50%;
+}
+ 
+.img-box img{
+	width:100%;
+}
+
+.btn{
+	border:none;
+	outline:none;
+	background:none;
+	padding:10px 30px;
+	font-size: 20px;
+	color:rgb(40, 206, 221);
+	cursor: pointer;
+	margin:10px auto;			 
+}
+
+.btn:hover{
+	color: aqua;
+}
+*{
+    margin: 0;
+    padding: 0;
+  
+    list-style: none;
+    text-decoration: none;
+    font-family: 'pixel', 'Courier New', Courier, monospace;
+}
+
+.sidebar{
+    position: absolute;
+    top: 30vh;
+    position: fixed;
+    left: 0;
+    width: 200px;
+    height: 250px;
+}
+
+.sidebar ul a{
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 70px;
+    font-size: 25px;
+    font-weight: bolder;
+    color: white;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.sidebar ul a:hover{
+    color: rgb(40, 206, 221);
+}
